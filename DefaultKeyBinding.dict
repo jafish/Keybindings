@@ -1,0 +1,26 @@
+{
+	// TextMate Command-Return (Command Enter)
+	"@\U000D" = (moveToEndOfParagraph:, insertNewline:);
+
+	// Insert blank line above paragraph (Command Shift Enter)
+	"@$\U000D" = (moveToBeginningOfParagraph:, moveLeft:, insertNewline:);
+
+	// select entire line/paragraph
+	"~S" = (moveToBeginningOfParagraph:, moveToEndOfParagraphAndModifySelection:, moveRightAndModifySelection:);
+
+	// select from beginning of paragraph to last character
+	"~s" = (moveToBeginningOfParagraph:, moveToEndOfParagraphAndModifySelection:);
+
+	// hyphenate next space and move to next word 
+	"@~_" = (selectWord:, moveRight:, setMark:, moveWordRight:, moveWordLeft:, moveLeft:, selectWord:, insertText:, "-", moveWordRight:); 
+
+	// bookmark 
+	"~1" = (setMark:); 
+	// jump to bookmark 
+	"~2" = (swapWithMark:,centerSelectionInVisibleArea:);
+
+	// move line up 
+	"^@\UF700" = (selectParagraph:, setMark:, deleteToMark:, moveLeft:, moveToBeginningOfParagraph:, yank:, moveLeft:, selectToMark:, moveLeft:); 
+	// move line down 
+	"^@\UF701" = (selectParagraph:, setMark:, deleteToMark:, moveToEndOfParagraph:, moveRight:, setMark:, yank:, moveLeft:, selectToMark:);
+}
